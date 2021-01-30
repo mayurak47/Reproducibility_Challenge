@@ -7,6 +7,7 @@ import torch.optim as optim
 from tqdm import tqdm
 from torch.utils.data import DataLoader, Dataset
 
+'''find average weekly dataset, removing outliers'''
 def preprocess_data(file_path):
     with open(file_path) as f:
         json_data = json.load(f)
@@ -33,6 +34,8 @@ class TempDataset(Dataset):
     def __getitem__(self, idx):
         return self.X[idx], self.y[idx]
 
+
+'''train-test split'''
 def atmospheric_dataloaders():
     data = preprocess_data("data/10_year_temp_data.json")
     y_train = data[:312]

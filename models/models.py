@@ -3,6 +3,8 @@ import torch.nn as nn
 import torchvision.models as models
 from copy import deepcopy
 
+
+'''the various activation functions defined as subclasses of nn.Module'''
 class SinActivation(nn.Module):
     def __init__(self):
         super().__init__()
@@ -41,6 +43,10 @@ class LearnedSnake(nn.Module):
     def forward(self, x):
         return x + torch.square(torch.sin(self.a * x))/self.a
 
+
+'''a basic feedforward neural network returning a model with the specified architecture and activations
+e.g. SimpleMLP((1, 64, 64, 1), "snake")'''
+
 class SimpleMLP(nn.Module):
     def __init__(self, layer_sizes, hidden_activation):
         super().__init__()
@@ -75,6 +81,9 @@ class SimpleMLP(nn.Module):
             x = layer(x)
         return x
 
+'''ResNet18 with the specified activation. Since the CIFAR images
+ aren't very large, the initial conv1 and maxpool layers are modified.'''
+
 def ResNet18WithActivation(activation):
     resnet18 = models.resnet18()
     resnet18.conv1 = torch.nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
@@ -94,6 +103,7 @@ def ResNet18WithActivation(activation):
 
     return resnet18
 
+'''a simple RNN used for comparison with snake MLPs'''
 class RNN(nn.Module):
     def __init__(self, input_size=1, hidden_layer_size=64, output_size=1, activation="relu"):
         super().__init__()

@@ -1,3 +1,5 @@
+'''taken from https://github.com/Z-T-WANG/LaProp-Optimizer'''
+
 from torch.optim import Optimizer
 import math
 import torch

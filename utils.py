@@ -10,6 +10,8 @@ import numpy as np
 import os
 import random
 
+
+'''ensure same results observed across runs'''
 def ensure_reproducibility(seed):
 
     random.seed(seed)
@@ -30,6 +32,8 @@ def step(val):
         return 0
     return 1
 
+
+'''generate a dataset of an analytic function between the given bounds'''
 def gen_func_dataset(lower_limit, upper_limit, func, gap=0.01):
     inputs = torch.arange(lower_limit, upper_limit, gap).reshape(-1, 1)
     if func == "identity":
@@ -48,6 +52,8 @@ def gen_func_dataset(lower_limit, upper_limit, func, gap=0.01):
         raise Exception("Unknown function")
     return inputs, outputs
 
+
+'''sample num_points points from the generated dataset'''
 def sample_func_dataset(dataset_inputs, dataset_outputs, lower_lim, upper_lim, num_points):
     valid_indices = torch.where((dataset_inputs>=lower_lim) & (dataset_inputs<=upper_lim))[0]
 
@@ -67,6 +73,8 @@ def normalize(sampled_inputs, function_inputs):
 
     return normalized_sample_inputs, normalized_function_inputs
 
+
+'''functions to train for the various experiments and datasets'''
 def train_extrapolation(model, train_inputs, train_outputs, epochs, verbose=False):
 
     train_losses = []
@@ -366,6 +374,8 @@ def train_sinusoid(model, X, y, epochs, verbose=False):
             print("\nTrain loss: {:.4f}".format(loss.item()))
     return model, train_losses
 
+
+'''generate dataset for RNN'''
 def create_inout_sequences(input_data, window=10):
     sequences = []
     L = len(input_data)
@@ -375,7 +385,7 @@ def create_inout_sequences(input_data, window=10):
         sequences.append((input_seq, output))
     return sequences
 
-
+'''add noise to the sinusoidal function sin(x/10)'''
 def sin_with_noise(low_bound=0, up_bound=300, step=1, train_split=200, sigma=0.0):
     X = torch.arange(low_bound, up_bound, step)
     y = torch.sin(X/10)
