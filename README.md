@@ -22,7 +22,26 @@ In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visu
 
 Clone the repository with ```git clone https://github.com/mayurak47/Reproducibility_Challenge```.
 
-Install the necessary libraries with ```pip install -r requirements.txt```.
+Install the necessary libraries with ```pip install -r requirements.txt```. This was obtained from a Python 3.6.9 runtime on Google Colab, on which the code was tested. In case of any inconsistencies or errors, please install the appropriate version of the following packages manually, using ```pip``` or ```conda```:
+
+```numpy```
+
+```torch```
+
+```torchvision```
+
+```matplotlib```
+
+```scikit-learn```
+
+```tqdm```
+
+```jupyter```
+
+```pandas```
+
+```nltk```
+
 
 Run the notebooks, if necessary modifying any (hyper)parameters in the relevant files in ```data```, ```models```, ```utils.py```, or in the notebook itself.
 
