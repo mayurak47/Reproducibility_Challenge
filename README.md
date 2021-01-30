@@ -4,6 +4,7 @@ Code for reproducing the paper "Neural Networks Fail to Learn Periodic Functions
 Due to the interactive nature of the experiments, most implementations are provided as Jupyter notebooks.
 
 <h3> Description </h3>
+
 ```Extrapolation_experiments.ipynb``` contains the basic extrapolation experiments on analytical functions with neural networks having different nonlinearities.
 
 In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visualized, it is shown that *snake* can regress *sin(x)* and an MLP is trained on MNIST demonstrating the optimization capability of *snake*.
@@ -14,7 +15,7 @@ In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visu
 
 ```dcgan.py``` implements a DCGAN on the MNIST dataset, using the specified nonlinearity in the generator and discriminator networks.
 
-```Sentiment Analysis``` is an attempt at using an LSTM network with the *snake* activation for sentiment analysis on the IMDB Movie Reviews Dataset.
+```Sentiment_Analysis.ipynb``` is an attempt at using an LSTM network with the *snake* activation for sentiment analysis on the IMDB Movie Reviews Dataset.
 
 
 <h3> Usage </h3>
