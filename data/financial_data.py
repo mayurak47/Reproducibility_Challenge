@@ -4,6 +4,7 @@ import torch
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import DataLoader, Dataset
 
+'''data in IndexHistory_19950101.csv downloaded from https://www.wilshire.com/indexes'''
 
 '''training data - 1995-1-1 to 2020-1-31, testing data - 2020-2-1 to 2020-5-31'''
 def preprocess_financial_data(file_path):

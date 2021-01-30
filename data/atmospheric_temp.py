@@ -7,6 +7,8 @@ import torch.optim as optim
 from tqdm import tqdm
 from torch.utils.data import DataLoader, Dataset
 
+'''data in 10_year_temp_data.json downloaded from https://join.fz-juelich.de/access/'''
+
 '''find average weekly dataset, removing outliers'''
 def preprocess_data(file_path):
     with open(file_path) as f:
