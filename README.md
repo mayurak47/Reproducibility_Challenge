@@ -20,6 +20,8 @@ In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visu
 
 <h3> Usage </h3>
 
+Clone the repository with ```git clone https://github.com/mayurak47/Reproducibility_Challenge```.
+
 Install the necessary libraries with ```pip install -r requirements.txt```.
 
 Run the notebooks, if necessary modifying any (hyper)parameters in the relevant files in ```data```, ```models```, ```utils.py```, or in the notebook itself.
