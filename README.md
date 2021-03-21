@@ -22,7 +22,7 @@ In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visu
 
 Clone the repository with ```git clone https://github.com/mayurak47/Reproducibility_Challenge```.
 
-Install the necessary libraries with ```pip install -r requirements.txt```. This was obtained from a Python 3.6.9 runtime on Google Colab, on which the code was tested. In case of any inconsistencies or errors, please install the appropriate version of the following packages manually, using ```pip``` or ```conda```:
+Preferably create a Python virtual environment (e.g. ```conda create -n <env_name> python=3.6.9```) and activate it. Install the necessary libraries with ```pip install -r requirements.txt```. In case of any inconsistencies or errors, please install the appropriate version of the following packages manually, using ```pip``` or ```conda```:
 
 ```
 numpy
