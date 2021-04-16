@@ -1,4 +1,4 @@
-# Reproducibility_Challenge
+# [Re] Neural Networks Fail to Learn Periodic Functions and How to Fix It
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/334287670.svg)](https://zenodo.org/badge/latestdoi/334287670)
