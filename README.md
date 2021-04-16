@@ -1,4 +1,8 @@
 # Reproducibility_Challenge
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/334287670.svg)](https://zenodo.org/badge/latestdoi/334287670)
+
 Code for reproducing the paper "Neural Networks Fail to Learn Periodic Functions and How to Fix It" as part of the ML Reproducibility Challenge
 
 Due to the interactive nature of the experiments, most implementations are provided as Jupyter notebooks.
