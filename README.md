@@ -22,7 +22,7 @@ In ```Snake_simple_experiments.ipynb```, the *snake* activation function is visu
 
 Clone the repository with ```git clone https://github.com/mayurak47/Reproducibility_Challenge```.
 
-Preferably create a Python virtual environment (e.g. ```conda create -n <env_name> python=3.6.9```) and activate it. Install the necessary libraries with ```pip install -r requirements.txt```. In case of any inconsistencies or errors, please install the appropriate version of the following packages manually, using ```pip``` or ```conda```:
+Preferably create a Python virtual environment (e.g. ```conda create -n <env_name> python=3.6.9```) and activate it. Install the necessary libraries with ```pip install -r requirements.txt```. If you are using a GPU, make sure that PyTorch is installed properly with ```torch.cuda.is_available()``` and install the right version from https://pytorch.org/get-started/locally/ otherwise. In case of any inconsistencies or errors, please install the appropriate version of the following packages manually, using ```pip``` or ```conda```:
 
 ```
 numpy
